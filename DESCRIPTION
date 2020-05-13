@@ -1,0 +1,19 @@
+Package: simplecountries
+Type: Package
+Title: Convert Alternative Country Names to Common English
+Version: 0.1.1
+Author: David Sjoberg
+Maintainer: David Sjoberg <david.sjoberg@gmail.com>
+Description: Country can have multiple names. This package helps you to convert all these alternatives into the common english version.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 2.10)
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat (>= 2.1.0),
+    rvest,
+    dplyr,
+    usethis,
+    stringr,
+    tidyr
