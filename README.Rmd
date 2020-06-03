@@ -7,7 +7,7 @@ output: github_document
 <!-- badges: start -->
 <!-- badges: end -->
 
-`simplecountries` is a simple R package that helps to convert alternative country names to common English. It only has the function `simple_country_name`. The main source is  [this wikipedia article](https://en.wikipedia.org/wiki/List_of_alternative_country_names).
+`simplecountries` is a simple R package that helps to convert alternative country names to common English. It only has the function `simple_country_name`. The main source is  [this wikipedia article](https://en.wikipedia.org/wiki/List_of_alternative_country_names) and the conversion table from `countrycode`.
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -17,7 +17,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
 
 ``` r
 remotes::install_github("davidsjoberg/simplecountries")
@@ -30,10 +29,10 @@ This is a basic example:
 ```{r example}
 library(simplecountries)
 
-x <- c("Czech", "Great Britain")
+x <- c("Czech", "Great Britain", "Sverige", "U.K.")
 simple_country_name(x)
 ```
 
-***
+## Use `countrycode` instead
 
-If there is alternative names missing from this function let me know!
+Since `simplecountries` was made the mature package `countrycode` has introduced the function `countryname` which does the same thing but is probably better maintained. You probably want to you that package instead. More info [here](https://github.com/vincentarelbundock/countrycode).
